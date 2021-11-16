@@ -1,17 +1,18 @@
 <?php
 session_start();
-require 'config.php';
+require 'asset/config.php';
+
 //cek cookie
 if(isset($_COOKIE['apa']) && isset($_COOKIE['ini'])){
-    $apa= $_COOKIE['apa'];
-    $ini=$_COOKIE['ini'];
+   $apa= $_COOKIE['apa'];
+  $ini=$_COOKIE['ini'];
     //mengambil username berdasarkan id
-    $query= mysqli_query($conn,"SELECT email FROM users WHERE id= $apa");
-    $row = mysqli_fetch_assoc($query);
+   $query= mysqli_query($conn,"SELECT email FROM users WHERE id= $apa");
+   $row = mysqli_fetch_assoc($query);
 
     // cek cookie dan username 
     if ($ini === hash('sha256', $row['email'])) {
-       $_SESSION ['login']=true;
+      $_SESSION ['login']=true;
     }
 }
 //cek session

@@ -1,11 +1,5 @@
 
-<?php
-session_start();
-if (!isset($_SESSION["login"])) {
-    header("Location:asset/login.php");
-    exit;
-}
-?>
+
 <?php
 include('asset/config.php');
 $id = $_GET['id'];

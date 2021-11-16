@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require 'config.php';
+require 'asset/config.php';
 
 if(isset($_POST["login"])){
     $email= $_POST["email"];
@@ -25,7 +25,7 @@ if(isset($_POST["login"])){
                     setcookie('apa', $row['id'],time() +60);
                     setcookie ('ini', hash('sha256',$row['email']),time() +60);
                 }
-            header("Location: ../index.php");  
+            header("Location: index.php");  
             exit;
         }
         

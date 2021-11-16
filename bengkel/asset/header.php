@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location:./login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +41,7 @@
                         <a class="nav-link" aria-current="page" href="./history.php">Riwayat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="asset/logout.php">Logout</a>
+                        <a class="nav-link" aria-current="page" href="./logout.php">Logout</a>
                     </li>
                 </ul>
                 <form class="d-flex">

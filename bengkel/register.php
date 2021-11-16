@@ -42,7 +42,7 @@
         <div class="card-body">
             <h5 class="card-title" style="text-align: center;">Registrasi</h5>
 
-            <form action="register_proses.php" method="POST">
+            <form action="asset/register_proses.php" method="POST">
             <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama">
