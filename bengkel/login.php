@@ -17,7 +17,7 @@ if (isset($_COOKIE['apa']) && isset($_COOKIE['ini'])) {
 }
 //cek session
 if (isset($_SESSION["login"])) {
-    header("Location:../index.php");
+    header("Location:index.php");
     exit;
 }
 ?>
