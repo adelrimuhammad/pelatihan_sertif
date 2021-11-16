@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location:asset/login.php");
+    exit;
+}
+?>
+
 <?php include('asset/header.php'); ?>
 
 <div class="container-fluid my-5 py-5">

@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location:asset/login.php");
+    exit;
+}
+?>
+
+<?php
 include('asset/config.php');
 $query = "SELECT * FROM bengkel";
 $select = mysqli_query($conn, $query);
