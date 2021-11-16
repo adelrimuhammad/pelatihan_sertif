@@ -37,7 +37,7 @@ return mysqli_affected_rows($conn);
 if(isset($_POST["register"])) {
     if(registrasi($_POST)>0){
         
-        header("location:../login.php");
+        header("location:login.php");
        
     } else {
         echo mysqli_error($conn);
